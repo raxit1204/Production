@@ -1,0 +1,16 @@
+{
+  "name": "production-backend",
+  "version": "1.0.0",
+  "description": "Learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javaScript",
+    "node",
+    "production"
+  ],
+  "author": "Raaxit",
+  "license": "ISC"
+}
