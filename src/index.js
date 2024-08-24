@@ -3,11 +3,23 @@ import dotenv from "dotenv";
 // import mongoose from "mongoose";
 // import { Db_Name } from "./constants";
 import connectDb from "./db/db.js";
+import { portconfig } from "./constants.js";
+import express from "express";
+const app = express();
 
 dotenv.config({
   path: "./env",
 });
-connectDb();
+
+connectDb()
+  .then(() => {
+    app.listen(portconfig, () => {
+      console.log(`Server is Running at Port ${portconfig}`);
+    });
+  })
+  .catch((err) => {
+    console.log("Connection Error(Database)", err);
+  });
 
 // import express from "express";
 
