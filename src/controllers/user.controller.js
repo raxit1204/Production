@@ -268,7 +268,7 @@ const updateAccountDetails = asynchandler(async (req, res) => {
     .json(new ApiResponse(200, User, "Account details updated"));
 });
 
-const updateUserAvatar = asyncHandler(async (req, res) => {
+const updateUserAvatar = asynchandler(async (req, res) => {
   const avatarLocalPath = req.file?.path;
 
   if (!avatarLocalPath) {
@@ -298,7 +298,7 @@ const updateUserAvatar = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, user, "Avatar image updated successfully"));
 });
 
-const updateUserCoverImage = asyncHandler(async (req, res) => {
+const updateUserCoverImage = asynchandler(async (req, res) => {
   const coverImageLocalPath = req.file?.path;
 
   if (!coverImageLocalPath) {
